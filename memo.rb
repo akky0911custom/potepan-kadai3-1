@@ -28,7 +28,7 @@ elsif memo_type == 2
   input_memo = $stdin.read
   memo = input_memo.chomp
 
-  CSV.open("#{file_name}.csv" , "a") do |csv|
+  CSV.open("#{file_name}.csv" , "r+") do |csv|
     csv.puts ["#{memo}"]
   end
 
